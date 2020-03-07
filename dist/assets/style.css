@@ -1,0 +1,89 @@
+html, body {
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.greeting {
+  text-transform: capitalize;
+  font-size: 35px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-family: "Sen", sans-serif;
+  padding: 20px;
+}
+
+.nameForm {
+  margin-top: calc(100vh / 2);
+  margin-left: auto;
+  margin-right: auto;
+}
+.nameForm input {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 10px;
+  color: black;
+  border: none;
+  border-bottom: 1px solid black;
+  width: calc(100% - 35px);
+  font-size: 22px;
+  font-family: "Sen", sans-serif;
+  text-transform: capitalize;
+}
+.nameForm button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.todo {
+  margin-top: calc(50vh / 2);
+  width: 50vh;
+  height: 100%;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.todo .nameInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 10px;
+}
+.todo h2 {
+  text-transform: capitalize;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Sen", sans-serif;
+}
+.todo p {
+  color: black;
+  font-size: 15px;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Sen", sans-serif;
+}
+.todo .row ul {
+  display: table;
+  list-style: none;
+  margin: 0 auto;
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+}
+.todo .row ul li {
+  text-transform: capitalize;
+  color: black;
+  text-align: center;
+}
+.todo .row ul li input {
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */
