@@ -15,12 +15,35 @@ html, body {
   padding: 20px;
 }
 
+.appName,
+.ddt {
+  text-align: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.appName span,
+.ddt span {
+  font-weight: 700;
+}
+
+.ddt {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .nameForm {
-  margin-top: calc(100vh / 2);
   margin-left: auto;
   margin-right: auto;
 }
-.nameForm input {
+.nameForm .row .formDiv form {
+  margin: 0 10px;
+  margin-top: calc(65vh / 2);
+}
+.nameForm .row .formDiv form input {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 10px;
   color: black;
@@ -30,6 +53,27 @@ html, body {
   font-size: 22px;
   font-family: "Sen", sans-serif;
   text-transform: capitalize;
+}
+.nameForm .row .formH2 h2 {
+  padding: 10px;
+  margin-top: calc(60vh / 2);
+  text-align: center;
+  color: #000;
+  font-weight: 800;
+  font-family: "Sen", sans-serif;
+  text-transform: capitalize;
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 760px) {
+  .nameForm .row {
+    flex-direction: column-reverse;
+  }
+  .nameForm .row .formDiv form,
+.nameForm .row .formH2 h2 {
+    margin-top: 100px;
+  }
 }
 .nameForm button {
   border: none;
@@ -43,17 +87,10 @@ html, body {
 
 .todo {
   margin-top: calc(50vh / 2);
-  width: 50vh;
+  width: calc(100% - 20px);
   height: 100%;
   padding: 10px 10px;
   background-color: rgba(255, 255, 255, 0.4);
-}
-.todo .nameInput {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 10px;
 }
 .todo h2 {
   text-transform: capitalize;
@@ -71,7 +108,6 @@ html, body {
   font-family: "Sen", sans-serif;
 }
 .todo .row ul {
-  display: table;
   list-style: none;
   margin: 0 auto;
   font-family: "Caveat", cursive;

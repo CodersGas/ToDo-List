@@ -19,21 +19,68 @@ html, body{
 	padding: 20px;
 }
 
+.appName,
+.ddt {
+	text-align: center;
+	margin-top: 20px; 
+	text-transform: $text-transform;
+	color: #000;
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	span{
+		font-weight: 700;
+	}
+}
+
+.ddt {
+	font-size: 20px;
+	font-weight: 600;
+}
 .nameForm{
-	margin-top: calc(100vh / 2);
 	margin-left: auto;
 	margin-right: auto;
+	.row {
+		.formDiv form {
+			margin: 0 10px;
+			margin-top: calc(65vh / 2);
 
-	input{
-		background-color: rgba(255, 255, 255, 0.1);
-		padding-left: 10px;
-		color: black;
-		border: none;
-		border-bottom: 1px solid black;
-		width: calc(100% - 35px);
-		font-size: 22px;
-		font-family: 'Sen', sans-serif;
-		text-transform: $text-transform;
+			input{
+				background-color: rgba(255, 255, 255, 0.1);
+				padding-left: 10px;
+				color: black;
+				border: none;
+				border-bottom: 1px solid black;
+				width: calc(100% - 35px);
+				font-size: 22px;
+				font-family: 'Sen', sans-serif;
+				text-transform: $text-transform;
+			}
+		}
+
+		.formH2 h2{
+			padding: 10px;
+			margin-top: calc(60vh / 2);
+			text-align: center;
+			color: #000;
+			font-weight: 800;
+			font-family: 'Sen', sans-serif;
+			text-transform: capitalize;
+			font-size: 50px;
+			border: 2px solid black;
+			border-radius: 10px;
+		}
+	}
+
+	@media only screen and (max-width: 760px) {
+		.row {
+			flex-direction: column-reverse;
+
+			.formDiv form, 
+			.formH2 h2{
+				margin-top: 100px;
+			}
+		}
 	}
 
 	button {
@@ -50,18 +97,10 @@ html, body{
 .todo {
 	
 	margin-top: calc(50vh / 2);
-	width: 50vh;
+	width: calc(100% - 20px);
 	height: 100%;
 	padding: 10px 10px;
 	background-color: rgba(255, 255, 255, 0.4);
-
-	.nameInput{
-		width: 100%;
-		border: none;
-		border-bottom: 1px solid black;
-		background-color: rgba(255, 255, 255, 0.1);
-		padding-left: 10px;
-	}
 
 	h2 {
 		text-transform: $text-transform;
@@ -83,7 +122,6 @@ html, body{
 	.row {
 
 		ul {
-			display: table;
 			list-style: none;
 			margin: 0 auto;
 			font-family: 'Caveat', cursive;
