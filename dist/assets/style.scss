@@ -1,5 +1,5 @@
 $text-transform: capitalize;
-$text-color: black;
+$black-text-color: #000;
 $center-align: center;
 
 html, body{
@@ -13,7 +13,7 @@ html, body{
 	text-transform: $text-transform;
 	font-size: 35px;
 	text-align: center;
-	color: #000;
+	color: $black-text-color;
 	font-weight: bold;
 	font-family: 'Sen', sans-serif;
 	padding: 20px;
@@ -24,7 +24,7 @@ html, body{
 	text-align: center;
 	margin-top: 20px; 
 	text-transform: $text-transform;
-	color: #000;
+	color: $black-text-color;
 	font-size: 50px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -48,9 +48,9 @@ html, body{
 			input{
 				background-color: rgba(255, 255, 255, 0.1);
 				padding-left: 10px;
-				color: black;
+				color: $black-text-color;
 				border: none;
-				border-bottom: 1px solid black;
+				border-bottom: 1px solid $black-text-color;
 				width: calc(100% - 35px);
 				font-size: 22px;
 				font-family: 'Sen', sans-serif;
@@ -62,12 +62,12 @@ html, body{
 			padding: 10px;
 			margin-top: calc(60vh / 2);
 			text-align: center;
-			color: #000;
+			color: $black-text-color;
 			font-weight: 800;
 			font-family: 'Sen', sans-serif;
 			text-transform: capitalize;
 			font-size: 50px;
-			border: 2px solid black;
+			border: 2px solid $black-text-color;
 			border-radius: 10px;
 		}
 	}
@@ -86,7 +86,7 @@ html, body{
 	button {
 		border: none;
 		background-color: rgba(255, 255, 255, 0);
-		color: black;
+		color: $black-text-color;
 		font-size: 22px;
 		font-weight: bold;
 		cursor: pointer;
@@ -97,7 +97,7 @@ html, body{
 .todo {
 	
 	margin-top: calc(50vh / 2);
-	width: calc(100% - 20px);
+	width: calc(100vh / 2);
 	height: 100%;
 	padding: 10px 10px;
 	background-color: rgba(255, 255, 255, 0.4);
@@ -105,14 +105,14 @@ html, body{
 	h2 {
 		text-transform: $text-transform;
 		font-size: 50px;
-		color: $text-color;
+		color: $black-text-color;
 		font-weight: bold;
 		text-align: $center-align;
 		font-family: 'Sen', sans-serif;
 	}
 
 	p {
-		color: $text-color;
+		color: $black-text-color;
 		font-size: 15px;
 		text-transform: $text-transform;
 		text-align: $center-align;
@@ -129,7 +129,7 @@ html, body{
 
 			li {
 				text-transform: capitalize;
-				color: black;
+				color: $black-text-color;
 				text-align: center;
 
 				input {

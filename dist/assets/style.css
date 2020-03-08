@@ -46,9 +46,9 @@ html, body {
 .nameForm .row .formDiv form input {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 10px;
-  color: black;
+  color: #000;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
   width: calc(100% - 35px);
   font-size: 22px;
   font-family: "Sen", sans-serif;
@@ -63,7 +63,7 @@ html, body {
   font-family: "Sen", sans-serif;
   text-transform: capitalize;
   font-size: 50px;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 10px;
 }
 @media only screen and (max-width: 760px) {
@@ -78,7 +78,7 @@ html, body {
 .nameForm button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  color: black;
+  color: #000;
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
@@ -87,7 +87,7 @@ html, body {
 
 .todo {
   margin-top: calc(50vh / 2);
-  width: calc(100% - 20px);
+  width: calc(100vh / 2);
   height: 100%;
   padding: 10px 10px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -95,13 +95,13 @@ html, body {
 .todo h2 {
   text-transform: capitalize;
   font-size: 50px;
-  color: black;
+  color: #000;
   font-weight: bold;
   text-align: center;
   font-family: "Sen", sans-serif;
 }
 .todo p {
-  color: black;
+  color: #000;
   font-size: 15px;
   text-transform: capitalize;
   text-align: center;
@@ -115,7 +115,7 @@ html, body {
 }
 .todo .row ul li {
   text-transform: capitalize;
-  color: black;
+  color: #000;
   text-align: center;
 }
 .todo .row ul li input {

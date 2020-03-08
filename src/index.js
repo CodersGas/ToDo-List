@@ -5,7 +5,12 @@ import {displayDDT} from './modules/displayDayDateTime.js';
 var date = new Date();
 var time = date.getHours();
 var currentMonth = date.getMonth();
-var currentTime = (date.getHours() + ":" + date.getMinutes());
+var currentTime = (
+      (date.getHours() < 10 ? 0 + (date.getHours()).toString() : date.getHours()) + ":" 
+    
+    + (date.getMinutes() < 10 ? 0 + (date.getMinutes()).toString() : date.getMinutes())
+    
+    );
 var currentDate = (date.getDate() + "-" + parseInt(date.getMonth()+1) + "-" + date.getFullYear());
 
 changeBackgrounds(currentMonth);
