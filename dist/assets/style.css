@@ -49,10 +49,19 @@ html, body {
   color: #000;
   border: none;
   border-bottom: 1px solid #000;
-  width: calc(100% - 35px);
+  width: calc(100% - 50px);
   font-size: 22px;
   font-family: "Sen", sans-serif;
   text-transform: capitalize;
+}
+.nameForm .row .formDiv form button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000;
+  font-size: 29px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
 }
 .nameForm .row .formH2 h2 {
   padding: 10px;
@@ -74,15 +83,6 @@ html, body {
 .nameForm .row .formH2 h2 {
     margin-top: 100px;
   }
-}
-.nameForm button {
-  border: none;
-  background-color: rgba(255, 255, 255, 0);
-  color: #000;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
 }
 
 .todo {

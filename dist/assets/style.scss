@@ -37,6 +37,7 @@ html, body{
 	font-size: 20px;
 	font-weight: 600;
 }
+
 .nameForm{
 	margin-left: auto;
 	margin-right: auto;
@@ -51,11 +52,22 @@ html, body{
 				color: $black-text-color;
 				border: none;
 				border-bottom: 1px solid $black-text-color;
-				width: calc(100% - 35px);
+				width: calc(100% - 50px);
 				font-size: 22px;
 				font-family: 'Sen', sans-serif;
 				text-transform: $text-transform;
+			}	
+			
+			button {
+				border: none;
+				background-color: rgba(255, 255, 255, 0);
+				color: $black-text-color;
+				font-size: 29px;
+				font-weight: bold;
+				cursor: pointer;
+				outline: none;
 			}
+
 		}
 
 		.formH2 h2{
@@ -81,16 +93,6 @@ html, body{
 				margin-top: 100px;
 			}
 		}
-	}
-
-	button {
-		border: none;
-		background-color: rgba(255, 255, 255, 0);
-		color: $black-text-color;
-		font-size: 22px;
-		font-weight: bold;
-		cursor: pointer;
-		outline: none;
 	}
 }
 
