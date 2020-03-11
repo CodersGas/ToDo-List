@@ -1,6 +1,8 @@
 import {changeBackgrounds} from './modules/dynamicBackgrounds.js';
 import {displayGreetings} from './modules/greetings.js';
 import {displayDDT} from './modules/displayDayDateTime.js';
+import {generateAndSaveNote} from './modules/createAndSaveNote.js';
+import {retrieveData} from './modules/retrievedata.js';
 
 var date = new Date();
 var time = date.getHours();
@@ -15,9 +17,12 @@ var currentDate = (date.getDate() + "-" + parseInt(date.getMonth()+1) + "-" + da
 
 changeBackgrounds(currentMonth);
 displayDDT(date.getDay(), currentDate, currentTime);
+generateAndSaveNote();
+retrieveData();
 
 document.querySelector(".todo").style.display = "none";
 document.querySelector(".greeting").style.display = "none";
+document.querySelector(".notes").style.display = "none";
 
 var arrowRight = document.querySelector(".arrRight");
 
@@ -33,6 +38,11 @@ arrowRight.addEventListener("click", () =>{
             document.querySelector(".nameForm").style.display = "none";
             let userName = document.querySelector(".nameInput").value;
             displayGreetings(time, userName);
+
+            /***********saving user name****************/
+            if(localStorage.getItem("userName") == null) {
+                localStorage.setItem("userName", JSON.stringify(userName));
+            }
        }
 
     else {
@@ -40,7 +50,10 @@ arrowRight.addEventListener("click", () =>{
     }
 }); 
 
+
 window.onload = function() {
-    document.querySelector(".nameInput").value = "";
-    document.querySelector(".appName").style.marginLeft = "25px";
+    //document.querySelector(".nameInput").value = "";
+    //document.querySelector(".appName").style.marginLeft = "25px";
+
+    document.querySelector(".nameInput").value = JSON.parse(this.localStorage.getItem("userName"));
 }

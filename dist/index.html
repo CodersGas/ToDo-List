@@ -37,14 +37,25 @@
 
 		<div class="todo container">
 			<h2>to do list</h2>
-			<p>which list you want to create?</p>
+			<p>which todo you want to create?</p>
 			<div class="row">
 				<ul class="col-md-8 optionsList">
-					<li><input class="activity "type="checkbox">activities list</li>
-					<li><input class="activity "type="checkbox">grocery list</li>
-					<li><input class="activity "type="checkbox">weekly list</li>
-					<li><input class="activity "type="checkbox">reading list</li>
+					<li class="activity"><button type="button"> activity </button></li>
+					<li class="grocery"><button type="button"> grocery </button></li>
+					<li class="weekly"><button type="button"> weekly </button></li>
+					<li class="reading"><button type="button"> reading </button></li>
 				</ul>
+			</div>
+		</div>
+
+		<div class="notes container">
+			<div class="row flex-column justify-content-center">
+				<div class="d-flex flex-column justify-content-center">
+					<h6 class="noteType"></h6>
+					<h6 class="priorityMsg">set the priority of this task</h6>
+				</div>
+				<div class="notePage col-md-6">
+				</div>
 			</div>
 		</div>
 	</body>

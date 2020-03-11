@@ -118,8 +118,79 @@ html, body {
   color: #000;
   text-align: center;
 }
-.todo .row ul li input {
-  margin-right: 8px;
+.todo .row ul li button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  text-transform: capitalize;
+  text-align: center;
+}
+.todo .row ul li button:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.4s;
+}
+
+.notes {
+  margin-top: 80px;
+}
+.notes .row .noteType, .notes .row .priorityMsg {
+  margin-top: 12px;
+  text-transform: capitalize;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+}
+.notes .row .noteType {
+  font-family: "Caveat", cursive;
+}
+.notes .row .priorityMsg {
+  font-family: "Sen", sans-serif;
+}
+.notes .row .notePage {
+  text-align: center;
+  margin: 0 auto;
+}
+.notes .row .notePage ul {
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  list-style: none;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.notes .row .notePage ul .highP {
+  color: red;
+}
+.notes .row .notePage ul .medP {
+  color: green;
+}
+.notes .row .notePage ul .lowP {
+  color: black;
+}
+.notes .row .notePage input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  font-family: "Caveat", cursive;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 25px;
+  padding-left: 10px;
+  text-transform: capitalize;
+}
+.notes .row .notePage button {
+  margin-right: 10px;
+  border: none;
+  background-color: #90caf9;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  font-family: "Sen", sans-serif;
+  margin-top: 10px;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */
