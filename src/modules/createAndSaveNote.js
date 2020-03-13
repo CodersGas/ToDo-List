@@ -1,11 +1,12 @@
 import {createForm} from './createNoteForm.js';
+import {saveToStorage} from './saveToStorage.js';
 
 
 var choiceUL = document.querySelector(".optionsList");
 var choiceLI = choiceUL.querySelectorAll("li");
 
 var Detailarray = [];
-
+var i = 1;
 function generateAndSaveNote() {
 
     choiceLI.forEach(function(choice) {
@@ -20,7 +21,6 @@ function generateAndSaveNote() {
                 document.querySelector(".notes").style.display = "block";
                 createForm();
 
-                
                 document.querySelector(".saveBtn").addEventListener("click", (e) => {
 
                     e.preventDefault();
@@ -36,18 +36,19 @@ function generateAndSaveNote() {
                     else {  
                     
                         if(highP.checked == true) {
-                            Detailarray.push(userInput.value, highP.value);
+                            Detailarray.push(i, userInput.value, highP.value, " ");
                         }
 
                         else if(medP.checked == true) {
-                            Detailarray.push(userInput.value, medP.value);
+                            Detailarray.push(i, userInput.value, medP.value, " ");
                         }
 
                         else if(lowP.checked == true) {
-                            Detailarray.push(userInput.value, lowP.value);
+                            Detailarray.push(i, userInput.value, lowP.value, " ");
                         }
-                    
-                        localStorage.setItem(todoType, JSON.stringify(Detailarray));
+                        
+                        saveToStorage(i, Detailarray);
+                        i++;
                         alert("ToDo Saved");
                         userInput.value = "";
                         Detailarray = [];

@@ -164,7 +164,7 @@ html, body {
   color: red;
 }
 .notes .row .notePage ul .medP {
-  color: green;
+  color: yellow;
 }
 .notes .row .notePage ul .lowP {
   color: black;
@@ -190,6 +190,28 @@ html, body {
   outline: none;
   font-family: "Sen", sans-serif;
   margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.todoTable {
+  margin-top: 20px;
+}
+.todoTable .row .todoList table {
+  font-size: 11px;
+  color: black;
+  border-width: 1px;
+  border-color: black;
+  border-collapse: collapse;
+}
+.todoTable .row .todoList table thead tr th {
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid black;
+  text-transform: capitalize;
+}
+.todoTable .row .todoList tbody tr td {
+  border: 1px solid black;
+  text-align: center;
   text-transform: capitalize;
 }
 

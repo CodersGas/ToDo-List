@@ -190,7 +190,7 @@ html, body{
 					color: red;
 				}
 				.medP{
-					color: green;
+					color: yellow;
 				}
 				.lowP{
 					color: black;
@@ -220,6 +220,43 @@ html, body{
 				font-family: 'Sen', sans-serif;
 				margin-top: 10px;
 				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.todoTable {
+	margin-top: 20px;
+	.row {
+		.todoList {
+
+			table {
+				font-size: 11px;
+				color: black;
+				border-width: 1px;
+				border-color: black;
+				border-collapse: collapse;
+
+				thead {
+					tr {
+						th{
+							background-color: #fff;
+							text-align: $center-align;
+							border: 1px solid black;
+							text-transform: $text-transform;
+						}
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border: 1px solid black;
+						text-align: center;
+						text-transform: $text-transform;
+					}
+				}
 			}
 		}
 	}
