@@ -7,6 +7,8 @@ to a given task. After, completion of task, it can be deleted from the list, by 
 The background of this app will change according to months. The background images used
 here are from the google calender app.
 
+And the user data and the tasks saved will stay on device, since localStorage has been used.
+
 Technologies Used:
  1. HTML
  2. CSS(SASS)
