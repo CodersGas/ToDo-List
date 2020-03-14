@@ -6,7 +6,7 @@ function createTable() {
     var tbody = document.createElement("tbody");
     var headRow = document.createElement("tr");
 
-    ["S.No", "tasks", "priority", "done"].forEach(function(el) {
+    ["S.No", "category", "tasks", "priority", "done"].forEach(function(el) {
         var th = document.createElement("th");
         th.appendChild(document.createTextNode(el));
         headRow.appendChild(th);
@@ -40,6 +40,7 @@ function addTaskRow() {
             var tr = document.createElement("tr");
             let taskData = JSON.parse(localStorage.getItem(i));
 
+            console.log(taskData);
             taskData.forEach(function(ele) {
                 var td = document.createElement("td");
 

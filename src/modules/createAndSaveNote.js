@@ -37,18 +37,25 @@ function generateAndSaveNote() {
                     else {  
                     
                         if(highP.checked == true) {
-                            Detailarray.push(i, userInput.value, highP.value, " ");
+                            Detailarray.push(i, todoType, userInput.value, highP.value, " ");
                         }
 
                         else if(medP.checked == true) {
-                            Detailarray.push(i, userInput.value, medP.value, " ");
+                            Detailarray.push(i, todoType, userInput.value, medP.value, " ");
                         }
 
                         else if(lowP.checked == true) {
-                            Detailarray.push(i, userInput.value, lowP.value, " ");
+                            Detailarray.push(i, todoType, userInput.value, lowP.value, " ");
                         }
                         
-                        saveToStorage(i, Detailarray);
+                        if(localStorage.length == 1){
+                            i = 1;
+                            Detailarray[0] = i;
+                            saveToStorage(i, Detailarray);
+                        }
+                        else{
+                            saveToStorage(i, Detailarray);
+                        }
                         i++;
                         alert("ToDo Saved");
                         userInput.value = "";

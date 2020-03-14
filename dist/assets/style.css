@@ -230,6 +230,7 @@ html, body {
   font-size: 21px;
   padding: 5px;
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 .todoTable .row .todoList tbody tr td {
   border-bottom: 1px solid black;
