@@ -22,37 +22,44 @@ function addTaskRow() {
     var tbody = document.querySelector("tbody");
     var table = document.querySelector("table");
 
-    for(var i = 1; i <= localStorage.length; i++) {
+    var maxKey = 0;
 
-        if(!localStorage.getItem(i)) {
-            i++;
+    for(var j = 0; j < localStorage.length; j++) {
+        if(maxKey < JSON.parse(localStorage.key(j))) {
+            maxKey = JSON.parse(localStorage.key(j));
         }
-        console.log("i : " + i);
-        var tr = document.createElement("tr");
-        let taskData = JSON.parse(localStorage.getItem(i));
-        console.log("taskData : " + taskData);
+    }
+    console.log("MAx key : " + maxKey);
 
-        taskData.forEach(function(ele) {
-        
-            console.log(ele);
-            var td = document.createElement("td");
+    for(var i = 1; i <= maxKey; i++) {
+        if(localStorage.getItem(i) == null) {
+            continue;
+        }
 
-            if(ele === " ") {
-                let checkbox = document.createElement("input");
-                checkbox.setAttribute("type", "checkbox");
-                checkbox.setAttribute("class", "isTaskDone");
-                checkbox.setAttribute("class", i+"box");
-                checkbox.setAttribute("onchange", "clearTask(this)");
-                td.appendChild(checkbox);
-            }
+        else{
+            var tr = document.createElement("tr");
+            let taskData = JSON.parse(localStorage.getItem(i));
 
-            else {
-                td.appendChild(document.createTextNode(ele));
-            }
+            taskData.forEach(function(ele) {
+                var td = document.createElement("td");
 
-            tr.appendChild(td);
-            tbody.appendChild(tr);
-        });
+                if(ele === " ") {
+                    let checkbox = document.createElement("input");
+                    checkbox.setAttribute("type", "checkbox");
+                    checkbox.setAttribute("class", "isTaskDone");
+                    checkbox.setAttribute("class", i+"box");
+                    checkbox.setAttribute("onchange", "clearTask(this)");
+                    td.appendChild(checkbox);
+                }
+
+                else {
+                    td.appendChild(document.createTextNode(ele));
+                }
+
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            });
+        }
     }
     table.appendChild(tbody);
 }

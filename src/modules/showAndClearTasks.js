@@ -8,7 +8,13 @@ function showTasks() {
         if(document.querySelector(".todoTable").style.display == "none") {
             document.querySelector(".todoList").innerHTML = "";
             document.querySelector(".todoList").appendChild(createTable());
-            addTaskRow();
+
+            if(localStorage.length == 1){
+                alert("You haven't added any task...");
+            }
+            else{
+                addTaskRow();
+            }
 
             document.querySelector(".todoTable").style.display = "block";
             document.querySelector(".todo").style.display = "none";
