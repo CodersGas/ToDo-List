@@ -35,6 +35,20 @@ html, body {
   font-weight: 600;
 }
 
+.taskBtn {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.taskBtn button {
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
 .nameForm {
   margin-left: auto;
   margin-right: auto;
@@ -86,7 +100,8 @@ html, body {
 }
 
 .todo {
-  margin-top: calc(50vh / 2);
+  margin-top: calc(10vh / 2);
+  margin-bottom: 20px;
   width: calc(80vh / 2);
   height: 100%;
   padding: 10px 10px;
@@ -124,6 +139,7 @@ html, body {
   outline: none;
   text-transform: capitalize;
   text-align: center;
+  outline: none;
 }
 .todo .row ul li button:hover {
   transform: scale(1.2, 1.2);
@@ -179,6 +195,7 @@ html, body {
   font-size: 25px;
   padding-left: 10px;
   text-transform: capitalize;
+  outline: none;
 }
 .notes .row .notePage button {
   margin-right: 10px;
@@ -202,17 +219,24 @@ html, body {
   border-width: 1px;
   border-color: black;
   border-collapse: collapse;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .todoTable .row .todoList table thead tr th {
-  background-color: #fff;
   text-align: center;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   text-transform: capitalize;
+  font-size: 21px;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
 }
 .todoTable .row .todoList tbody tr td {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   text-align: center;
   text-transform: capitalize;
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Caveat", cursive;
 }
 
 /*# sourceMappingURL=style.css.map */

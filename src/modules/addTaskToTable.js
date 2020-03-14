@@ -22,7 +22,12 @@ function addTaskRow() {
     var tbody = document.querySelector("tbody");
     var table = document.querySelector("table");
 
-    for(var i = 1; i < localStorage.length; i++) {
+    for(var i = 1; i <= localStorage.length; i++) {
+
+        if(!localStorage.getItem(i)) {
+            i++;
+        }
+        console.log("i : " + i);
         var tr = document.createElement("tr");
         let taskData = JSON.parse(localStorage.getItem(i));
         console.log("taskData : " + taskData);
@@ -36,6 +41,8 @@ function addTaskRow() {
                 let checkbox = document.createElement("input");
                 checkbox.setAttribute("type", "checkbox");
                 checkbox.setAttribute("class", "isTaskDone");
+                checkbox.setAttribute("class", i+"box");
+                checkbox.setAttribute("onchange", "clearTask(this)");
                 td.appendChild(checkbox);
             }
 

@@ -14,6 +14,7 @@ function generateAndSaveNote() {
         choice.addEventListener("click", () => {
             
             document.querySelector(".todo").style.display = "none";
+            document.querySelector(".taskBtn").style.display = "none";
             let todoType = choice.className;
             document.querySelector(".noteType").innerHTML = todoType;
 
@@ -55,13 +56,14 @@ function generateAndSaveNote() {
                     }
                 });
             }
-
+            
             document.querySelector(".backBtn").addEventListener("click", () => {
 
                 if(document.querySelector(".notes").style.display !== "none") {
                     document.querySelector(".notes").style.display = "none";
                     document.querySelector(".todo").style.display = "block";
                     document.querySelector(".notePage").innerHTML = "";
+                    document.querySelector(".taskBtn").style.display = "block";
                 }
             });
         });

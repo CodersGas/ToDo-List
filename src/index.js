@@ -2,7 +2,7 @@ import {changeBackgrounds} from './modules/dynamicBackgrounds.js';
 import {displayGreetings} from './modules/greetings.js';
 import {displayDDT} from './modules/displayDayDateTime.js';
 import {generateAndSaveNote} from './modules/createAndSaveNote.js';
-import {showTasks} from './modules/showTasks.js';
+import {showTasks} from './modules/showAndClearTasks.js';
 
 var date = new Date();
 var time = date.getHours();
@@ -20,10 +20,12 @@ displayDDT(date.getDay(), currentDate, currentTime);
 generateAndSaveNote();
 showTasks();
 
+
 document.querySelector(".todo").style.display = "none";
 document.querySelector(".greeting").style.display = "none";
 document.querySelector(".notes").style.display = "none";
 document.querySelector(".todoTable").style.display = "none";
+document.querySelector(".taskBtn").style.display = "none";
 
 var arrowRight = document.querySelector(".arrRight");
 
@@ -37,6 +39,7 @@ arrowRight.addEventListener("click", () =>{
             document.querySelector(".nameForm").style.display = "none";
             document.querySelector(".appName").style.display = "none";
             document.querySelector(".nameForm").style.display = "none";
+            document.querySelector(".taskBtn").style.display = "block";
             let userName = document.querySelector(".nameInput").value;
             displayGreetings(time, userName);
 
@@ -51,11 +54,6 @@ arrowRight.addEventListener("click", () =>{
     }
 }); 
 
-
 window.onload = function() {
-    //document.querySelector(".nameInput").value = "";
-    //document.querySelector(".appName").style.marginLeft = "25px";
-
-    document.querySelector(".nameInput").value = JSON.parse(this.localStorage.getItem("userName"));
-    this.localStorage.clear();
+    document.querySelector(".nameInput").value = JSON.parse(this.localStorage.getItem(0));
 }

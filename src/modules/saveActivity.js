@@ -16,8 +16,6 @@ function saveToDo() {
             alert("ToDo Saved");
         }
     });
-
-    console.log(localStorage.getItem(0));
 }
 
 export {saveToDo};
